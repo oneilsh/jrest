@@ -1,0 +1,18 @@
+{
+  "name": "@oneilsh/jrest",
+  "version": "1.0.0",
+  "homepage": "https://github.com/oneilsh/jrest",
+  "description": "Command-line interface to axios for REST calls from JSON input on stdin.",
+  "main": "main.js",
+  "scripts": {
+    "test": " echo '[{\"axios\": true, \"method\": \"get\", \"url\": \"https://api.monarchinitiative.org/api/bioentity/disease/MONDO:0100096/genes\"}]' | jrest | jq '.[] | .associations | .[] | .id'"
+  },
+  "bin": {
+    "jrest": "main.js"
+  },
+  "author": "Shawn T. O'Neil",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
